@@ -37,18 +37,13 @@ class SplashController extends GetxController {
   }
 
   void openSignInSheet({Function()? action}) async {
-    // String? token = await SecureStorageService().read(key: 'auth_token');
-    // if (token != null) {
-    //   Get.offAllNamed(routeHome);
-    //   return;
-    // }
-
     Get.bottomSheet(
       BottomSheetContainer(
         withCloseButton: false,
         title: 'Sign in',
         child: SignInSheet(),
       ),
+      isDismissible: false,
       isScrollControlled: true,
     );
   }
