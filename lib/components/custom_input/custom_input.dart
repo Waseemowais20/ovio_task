@@ -16,6 +16,7 @@ class CustomInput extends StatelessWidget {
     this.initialValue,
     this.hintStyle,
     this.onFieldSubmitted,
+    this.obscureText = false,
   });
 
   final String? hint;
@@ -30,11 +31,13 @@ class CustomInput extends StatelessWidget {
   final int? borderColor;
   final String? Function(String?)? validator;
   final String? initialValue;
+  final bool obscureText;
   final TextStyle? hintStyle;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscureText,
       cursorColor: const Color(
         AppColors.blue2,
       ),

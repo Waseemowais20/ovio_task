@@ -5,10 +5,8 @@ class SignInSheet extends StatelessWidget {
     super.key,
   });
 
-  final TextEditingController userName =
-      TextEditingController(text: 'aa_owais_waseem');
-  final TextEditingController password =
-      TextEditingController(text: 'a1e1DwX5Ln');
+  final TextEditingController userName = TextEditingController();
+  final TextEditingController password = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +38,7 @@ class SignInSheet extends StatelessWidget {
                 child: CustomInput(
                   controller: password,
                   hint: 'Password',
+                  obscureText: true,
                 ),
               ),
             ],
