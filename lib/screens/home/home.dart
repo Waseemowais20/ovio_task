@@ -117,28 +117,33 @@ class HomeHeader extends StatelessWidget {
                   ),
             ),
             SizedBox(
-              width: DEVICE_WIDTH * 0.2,
-              child: Stack(
-                children: [
-                  Text(
-                    '${controller.cordinates?[0].dates?[0].value ?? 0}',
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyLarge!
-                        .copyWith(fontSize: 30, color: Color(AppColors.white)),
+              height: DEVICE_HEIGHT * 0.02,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: DEVICE_WIDTH * 0.02,
+                ),
+                Text(
+                  '${controller.cordinates?[0].dates?[0].value ?? 0}',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyLarge!
+                      .copyWith(fontSize: 30, color: Color(AppColors.white)),
+                ),
+                Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: DEVICE_WIDTH * 0.01),
+                  child: Icon(
+                    Icons.circle_outlined,
+                    size: DEVICE_HEIGHT * 0.02,
+                    weight: DEVICE_WIDTH * 0.02,
+                    color: Color(AppColors.white),
                   ),
-                  Positioned(
-                    right: 0,
-                    top: 0,
-                    child: Icon(
-                      Icons.circle_outlined,
-                      size: DEVICE_HEIGHT * 0.02,
-                      weight: DEVICE_WIDTH * 0.02,
-                      color: Color(AppColors.white),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
             Lottie.asset(weatherLottie),
             Text(
@@ -232,31 +237,33 @@ class WeeklyReport extends StatelessWidget {
                       SizedBox(
                         height: DEVICE_HEIGHT * 0.02,
                       ),
-                      SizedBox(
-                        width: DEVICE_WIDTH * 0.2,
-                        child: Stack(
-                          children: [
-                            Text(
-                              '${controller.dates[index].value ?? 0}',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyLarge!
-                                  .copyWith(
-                                      fontSize: 30,
-                                      color: Color(AppColors.white)),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: DEVICE_WIDTH * 0.02,
+                          ),
+                          Text(
+                            '${controller.dates[index].value ?? 0}',
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyLarge!
+                                .copyWith(
+                                    fontSize: 30,
+                                    color: Color(AppColors.white)),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: DEVICE_WIDTH * 0.01),
+                            child: Icon(
+                              Icons.circle_outlined,
+                              size: DEVICE_HEIGHT * 0.02,
+                              weight: DEVICE_WIDTH * 0.02,
+                              color: Color(AppColors.white),
                             ),
-                            Positioned(
-                              right: 0,
-                              top: 0,
-                              child: Icon(
-                                Icons.circle_outlined,
-                                size: DEVICE_HEIGHT * 0.02,
-                                weight: DEVICE_WIDTH * 0.02,
-                                color: Color(AppColors.white),
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
